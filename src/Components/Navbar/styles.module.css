@@ -1,0 +1,112 @@
+h1{
+    color: aquamarine;
+}
+
+.containerMenuBar{
+    background-color: #161b22;
+}
+
+.menuBar{
+    background-color: #161b22;
+    transition: all 500ms;
+    height: 65px;
+    padding: 0 1%;
+    
+}
+
+.inputPesquisa{
+    
+    height: 30px;
+    width: 265px;
+    background-color: #040506c7;
+    border: 1px solid rgb(67, 67, 67);
+    color: whitesmoke;
+    padding:0 5%;
+    align-items: center;
+    font-size: 14px;
+}
+
+.inputPesquisa:focus{
+    height: 25px;
+    background-color: #040506c7;
+    border: 1px solid rgb(67, 67, 67);
+    color: whitesmoke;
+    padding:0 5%;
+    align-items: center;
+    box-shadow: none;
+}
+
+.navItem{
+    margin: auto 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+
+
+}
+
+.navItem:hover{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.47);
+}
+
+.navItemInput{
+    margin: 2% 2%;
+}
+
+.profileOptions{
+    flex-direction: row-reverse;
+    background-color: aqua;
+    margin: 2% 1.5%;
+}
+
+@media only screen and (max-width: 800px) {
+
+    .menuBar{
+        background-color: #161b22;
+        padding: 0.2% 0%;
+        transition: all 500ms;
+        
+    }
+
+    .navItem{
+        color: white;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 500;
+        border-top: rgba(255, 255, 255, 0.197) solid 1px;
+        padding: 1% 0;
+        position: relative;
+        background-color: #161b22;
+    }
+
+    .inputPesquisa{
+    
+        height: 30px;
+        width: 100%;
+        background-color: #040506c7;
+        border: 1px solid rgb(67, 67, 67);
+        color: whitesmoke;
+        padding:0 5%;
+        align-items: center;
+        font-size: 14px;
+    }
+    
+    
+    .navItemInput{
+        margin: 2% 2%;
+    }
+
+    .togleBtn{
+        border: none;
+    }
+
+    .togleBtn:focus{
+        border: none;
+        outline: 0;
+        box-shadow: none;
+    }
+
+
+  }

@@ -1,0 +1,25 @@
+.containerMenuBar{
+    background-color: #0d1117;
+}
+
+.navOfPages{
+    
+    margin: 3% 3%;
+}
+
+.navItens{
+
+    text-decoration: none;
+    cursor: pointer;
+    margin: auto 2%;
+    color: white;
+    padding: 1%;
+    border-radius: 10px;
+}
+
+
+.navItens:hover{
+    text-decoration: none;
+    color: white;
+    background-color: #2a3038;
+}
