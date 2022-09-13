@@ -2,9 +2,6 @@ h1{
     color: aquamarine;
 }
 
-.containerMenuBar{
-    background-color: #161b22;
-}
 
 .menuBar{
     background-color: #161b22;
@@ -62,6 +59,11 @@ h1{
 }
 
 @media only screen and (max-width: 800px) {
+
+    .containerMenuBar{
+        background-color: #161b22;
+    }
+    
 
     .menuBar{
         background-color: #161b22;

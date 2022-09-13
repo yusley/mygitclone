@@ -1,5 +1,7 @@
 .containerMenuBar{
     background-color: #0d1117;
+    padding: auto 20px;
+    
 }
 
 .navOfPages{
@@ -11,7 +13,7 @@
 
     text-decoration: none;
     cursor: pointer;
-    margin: auto 2%;
+    margin: auto 1%;
     color: white;
     padding: 1%;
     border-radius: 10px;
@@ -22,4 +24,51 @@
     text-decoration: none;
     color: white;
     background-color: #2a3038;
+}
+
+
+.profile{
+    background-color: #0d1117;
+    padding: 3% 2%;
+   
+}
+
+.profileInformations{
+    display: flex;
+    color: aliceblue;
+    margin-bottom: 5%;
+
+}
+
+.profileItem{
+    margin-top: 2%;
+}
+
+
+
+.avatar{
+    width: 300px;
+}
+
+@media only screen and (max-width: 800px){
+
+    .profile{
+        background-color: #0d1117;
+        padding: 1% 5%;
+    }
+
+    .avatar{
+        width: 100%;
+    }
+
+    .profileAvatar{
+        max-width: 120px;
+        display: block;
+    }
+
+    .userName{
+        margin-top: 3%;
+        
+    }
+
 }
