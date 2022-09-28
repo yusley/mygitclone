@@ -23,7 +23,7 @@ function MenuBarNav(){
                         <Form.Control className={styles.inputPesquisa} type='text' placeholder='Search or jump to...'></Form.Control>
                     </Form>
                     
-                    <Link className={styles.navItem} to="/repositories">Pulls</Link>
+                    <Link className={styles.navItem} to="/repositories">Pull <span>requests</span> </Link>
                     <Link className={styles.navItem}  to="/repositories">Issues</Link>
                     <Link className={styles.navItem} to="/repositories">Marketplace</Link>
                     <Link className={styles.navItem} to="/repositories">Explorer</Link>

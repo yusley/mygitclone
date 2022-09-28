@@ -4,8 +4,8 @@ import styles from './styles.module.css'
 
 function MenuBar(){
     return(
-        <Container >
-            <Row className={styles.containerMenuBar}>
+        <Container fluid className={styles.containerMenuBar}>
+            <Row className={styles.containerRepositories}>
 
                 <Col className={styles.profile} xl={3}>
                     <Row className={styles.profileInformations} >
@@ -16,27 +16,25 @@ function MenuBar(){
                                 roundedCircle
                             />
                         </Col>
-                        <Col className={styles.userName}>          
-                            <h2>Yusley Santos</h2>
-                            <h4>yusley</h4>
+                        <Col className={`${styles.userName}${styles.profileItem}`}>          
+                            <h4>Yusley Santos</h4>
+                            <p>yusley</p>
    
                         </Col>
 
                         
                     </Row>
-                    <Row className={styles.profileItem}>
-                        <Form.Control type='text'/>
-                    </Row>
+                    
                     <Row className={styles.profileItem}>
                         <p>Um sonhador buscando conheciomento para realizar esses sonhos...</p>
                     </Row>
 
                     <Row className={styles.profileItem}>
-                        <Form.Control type='submit' value='Editar'/>
+                        <Form.Control type='submit' value='Edit Profile' className={styles.editProfile} />
                     </Row>
                     
                     <Row className={styles.profileItem}>
-                        <p>2 seguidores - 2 seguindo</p>
+                        <p>2 seguidores - 5 seguindo</p>
                     </Row>
                 </Col>
 

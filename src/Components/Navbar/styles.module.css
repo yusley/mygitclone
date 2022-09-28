@@ -39,8 +39,12 @@ h1{
     text-decoration: none;
     font-size: 14px;
     font-weight: 500;
+    display: flex;
 
+}
 
+span{
+    margin: 0 5%;
 }
 
 .navItem:hover{
@@ -50,6 +54,7 @@ h1{
 
 .navItemInput{
     margin: 2% 2%;
+    
 }
 
 .profileOptions{
@@ -60,8 +65,13 @@ h1{
 
 @media only screen and (max-width: 800px) {
 
+    span{
+        display: none;
+    }
+
     .containerMenuBar{
         background-color: #161b22;
+        border: none;
     }
     
 
@@ -69,7 +79,7 @@ h1{
         background-color: #161b22;
         padding: 0.2% 0%;
         transition: all 500ms;
-        
+        border: none;
     }
 
     .navItem{
