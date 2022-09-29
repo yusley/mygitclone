@@ -1,10 +1,29 @@
 import {Container,Row,Col, Nav, Image, Form} from 'react-bootstrap'
 import { Link } from 'react-router-dom';
 import styles from './styles.module.css'
+import axios from 'axios';
+import {useEffect,useState} from 'react'
 
 function MenuBar(){
+    const [useRepositories, setRepositories] = useState([])
+    const api = axios;
+    const url = 'https://api.github.com/users/yusley/repos'
+
+    useEffect(() => {
+
+        api.get(url)
+        .then((element) => (element.data))
+        .then((data) => {
+            setRepositories(data)
+        })
+        
+
+    },[])
+    
+
+
     return(
-        <Container fluid className={styles.containerMenuBar}>
+        <Container fluid className={styles.containerMenuBar} responsive>
             <Row className={styles.containerRepositories}>
 
                 <Col className={styles.profile} xl={3}>
@@ -47,6 +66,48 @@ function MenuBar(){
                         <Link className={styles.navItens} to="/packages">Packages</Link>
                         <Link className={styles.navItens} to="/stars">Stars</Link>
                     </Nav>
+
+                    <Col className={styles.repositories}>
+                        <Col className={styles.filter}>
+                            <Col xl={10}>
+                                <Col xl={8}>
+                                    <Form.Control
+                                    type='text'
+                                    />
+                                </Col>
+                                
+                                <Col xl={4}>
+                                    <Form.Control
+                                        type='submit'
+                                    />
+                                    <Form.Control
+                                        type='submit'
+                                    />
+                                    <Form.Control
+                                        type='submit'
+                                    />
+                                </Col>
+                                
+                            </Col>
+
+                            <Col xl={2}>
+                               
+                                <Form.Control
+                                    type='submit'
+                                    value='salve'
+                                />
+                            </Col>
+                        </Col>
+
+                        <Col className={styles.repositorieCol}>
+                            {useRepositories && useRepositories.map((itemMap,index) => (
+                                <h1 key={index}><a href={itemMap.url}>{itemMap.name}</a></h1>
+                            )) }
+                        </Col>
+
+
+                    </Col>
+
                 </Col>
             </Row>
         </Container>
