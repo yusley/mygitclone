@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import styles from './styles.module.css'
 import axios from 'axios';
 import {useEffect,useState} from 'react'
+import Dropdown from 'react-bootstrap/Dropdown';
+import DropdownButton from 'react-bootstrap/DropdownButton';
 
 function MenuBar(){
     const [useRepositories, setRepositories] = useState([])
@@ -26,7 +28,7 @@ function MenuBar(){
         <Container fluid className={styles.containerMenuBar} responsive>
             <Row className={styles.containerRepositories}>
 
-                <Col className={styles.profile} xl={3}>
+                <Col className={styles.profile} >
                     <Row className={styles.profileInformations} >
                         <Col className={styles.profileAvatar} >
                             <Image
@@ -41,16 +43,17 @@ function MenuBar(){
    
                         </Col>
 
+                        <Row className={styles.profileItem}>
+                            <p>Um sonhador buscando conheciomento para realizar esses sonhos...</p>
+                        </Row>
+
+                        <Row className={styles.profileItem}>
+                            <Form.Control type='submit' value='Edit Profile' className={styles.editProfile} />
+                        </Row>
                         
                     </Row>
                     
-                    <Row className={styles.profileItem}>
-                        <p>Um sonhador buscando conheciomento para realizar esses sonhos...</p>
-                    </Row>
 
-                    <Row className={styles.profileItem}>
-                        <Form.Control type='submit' value='Edit Profile' className={styles.editProfile} />
-                    </Row>
                     
                     <Row className={styles.profileItem}>
                         <p>2 seguidores - 5 seguindo</p>
@@ -58,7 +61,7 @@ function MenuBar(){
                 </Col>
 
 
-                <Col xl={9}>
+                <Col >
                     <Nav responsive className={styles.navOfPages}>
                         <Link className={styles.navItens} to="/overview" >Overview</Link>
                         <Link className={styles.navItens} to="/repositories">Repositories</Link>
@@ -69,34 +72,46 @@ function MenuBar(){
 
                     <Col className={styles.repositories}>
                         <Col className={styles.filter}>
-                            <Col xl={10}>
-                                <Col xl={8}>
+                            <Row className={styles.filterSearch} >
+                                
+                                <Col  className={styles.filterSearchInput} >
                                     <Form.Control
                                     type='text'
                                     />
                                 </Col>
-                                
-                                <Col xl={4}>
-                                    <Form.Control
-                                        type='submit'
-                                    />
-                                    <Form.Control
-                                        type='submit'
-                                    />
-                                    <Form.Control
-                                        type='submit'
-                                    />
+                                <Col  className={styles.filtersDropDowns}>
+                                   
+                                    <DropdownButton id="dropdown-basic-button" title="Typt">
+                                        <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+                                        <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+                                        <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                                    </DropdownButton>
+                                    <DropdownButton id="dropdown-basic-button" title="Lenguage">
+                                        <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+                                        <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+                                        <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                                    </DropdownButton>
+                                    <DropdownButton id="dropdown-basic-button" title="Sort">
+                                        <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+                                        <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+                                        <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                                    </DropdownButton>
+                                           
+                                    
                                 </Col>
-                                
-                            </Col>
 
-                            <Col xl={2}>
+                                <Col className={styles.inputNew} >
                                
                                 <Form.Control
                                     type='submit'
                                     value='salve'
                                 />
+                                
                             </Col>
+                                
+                            </Row>
+
+                            
                         </Col>
 
                         <Col className={styles.repositorieCol}>

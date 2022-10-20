@@ -7,8 +7,10 @@
     
 }
 
+
+
 .containerRepositories{
-    width: 90%;
+    width: 100%;
     max-width: 1250px;
     background-color: #0d1117;
 }
@@ -39,6 +41,7 @@
 .profile{
     background-color: #0d1117;
     padding: 3% 0%;
+    max-width: 300px;
    
 }
 
@@ -46,18 +49,68 @@
     display: flex;
     color: aliceblue;
     margin-bottom: 5%;
+    flex-basis: 100%;
+    align-items: center;
+    justify-content: center;
+  
 
 }
 
+
+.filterSearch{
+    display: flex;
+    padding: 2% 0;
+
+}
+
+.filterSearch .filtersDropDowns{
+    display: flex;
+    gap: 2%;
+    
+}
+
+.filterSearch .filtersDropDowns button{
+    background-color: gray;
+    margin: 0;
+    
+    
+   
+    
+}
+
+.filtersDropDownsItem{
+    display: flex;
+    
+}
+
+.filtersDropDownsItem div{
+    
+    padding: 0;
+   
+   
+}
+
+.inputNew input{
+    background-color: aquamarine;
+}
+
+
+.filterSearchInput{
+    min-width: 510px;
+    height: 100%;
+}
 
 .profileItem{
     margin-top: 0%;
     color: rgb(153, 153, 153);
+    
 }
 
+
+
 .editProfile{
-    margin: 0 3%;
-    max-width: 90%;
+    margin: 0 0%;
+    width: 100%;
     background-color: #21262d;
     font-size: 13px;
     font-weight: bold;
@@ -82,7 +135,9 @@
         justify-content: center;
         background-color: #161b22;
         border: none;
-        
+        width: 100%;
+        margin: 0;
+        padding: 2%;
     }
 
     .containerRepositories{
@@ -95,7 +150,9 @@
 
     .profile{
         background-color: #161b22;
-        padding: 1% 5%;
+        max-width: 100%;
+        width: 100%;
+       
     }
 
     .avatar{
@@ -115,6 +172,10 @@
     .editProfile{
         margin: 0;
         max-width: 100%;
+    }
+
+    .filterSearchInput{
+        min-width: 100%;
     }
 
 }
